@@ -1,23 +1,38 @@
 import React, {PureComponent} from 'react'
-import translations from '../translations'
+import PropTypes from 'prop-types'
 import './Select.scss'
 
 class Select extends PureComponent {
+	constructor (props) {
+		super(props)
+
+		this.optionItems = Object.keys(this.props.options).map((option) => 
+  		<option
+		  	key={this.props.options[option]["name_url"]}
+		  	value={this.props.options[option]["name_url"]}
+		  >
+		  	{this.props.options[option]["name"]}
+		  </option>
+		)
+	}
+
   render () {
     return (
     	<div className="Select">
 	    	<label>
-	    		{translations.selectArea}
+	    		{this.props.label}
 		      <select>
-					  <option value="volvo">Volvo</option>
-					  <option value="saab">Saab</option>
-					  <option value="mercedes">Mercedes</option>
-					  <option value="audi">Audi</option>
+					  {this.optionItems}
 					</select>
 				</label>
 			</div>
     )
   } 
+}
+
+Select.propTypes = {
+  label: PropTypes.string.isRequired,
+  options: PropTypes.object.isRequired
 }
 
 export default Select

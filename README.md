@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Improvements suggestions
 
+- Error handling (what if no regions are found)?
 
 ## Available Scripts
 
