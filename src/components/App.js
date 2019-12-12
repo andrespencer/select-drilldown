@@ -29,7 +29,8 @@ class App extends PureComponent {
           {!!Object.keys(jsonResponse.regions).length &&
             <Select
               options={jsonResponse.regions}
-              label={translations.selectArea}
+              label={translations.selectRegion}
+              default={translations.defaultSelectOption}
             />
           }
         </main>

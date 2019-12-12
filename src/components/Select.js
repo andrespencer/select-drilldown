@@ -22,6 +22,9 @@ class Select extends PureComponent {
 	    	<label>
 	    		{this.props.label}
 		      <select>
+		      	<option value={null}>
+		      		{this.props.default}
+		      	</option>
 					  {this.optionItems}
 					</select>
 				</label>
@@ -32,6 +35,7 @@ class Select extends PureComponent {
 
 Select.propTypes = {
   label: PropTypes.string.isRequired,
+  default: PropTypes.string.isRequired,
   options: PropTypes.object.isRequired
 }
 
