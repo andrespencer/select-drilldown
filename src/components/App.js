@@ -79,7 +79,7 @@ class App extends PureComponent {
           {jsonResponse.regions && !!Object.keys(jsonResponse.regions).length &&
             <Select
               options={jsonResponse.regions}
-              label={translations.selectRegion}
+              label={this.state.selectedRegion ? translations.done : translations.selectRegion}
               default={translations.defaultSelectOption}
               type="selectedRegion"
               onChange={this.handleChange}
@@ -88,25 +88,25 @@ class App extends PureComponent {
           {!!this.state.selectedRegion && jsonResponse.regions[this.state.selectedRegion] && !!Object.keys(jsonResponse.regions[this.state.selectedRegion].areas).length &&
             <Select
               options={jsonResponse.regions[this.state.selectedRegion].areas}
-              label={translations.selectArea}
+              label={this.state.selectedArea ? translations.done : translations.selectArea}
               default={translations.defaultSelectOption}
               type="selectedArea"
               onChange={this.handleChange}
             />
           }
-          {!!this.state.selectedRegion && !!this.state.selectedArea && jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea] && !!Object.keys(jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units).length &&
+          {!!this.state.selectedArea && jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea] && !!Object.keys(jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units).length &&
             <Select
               options={jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units}
-              label={translations.selectUnit}
+              label={this.state.selectedUnit ? translations.done : translations.selectUnit}
               default={translations.defaultSelectOption}
               type="selectedUnit"
               onChange={this.handleChange}
             />
           }
-          {!!this.state.selectedRegion && !!this.state.selectedArea && !!this.state.selectedUnit && jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units[this.state.selectedUnit] && !!Object.keys(jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units[this.state.selectedUnit].teams).length &&
+          {!!this.state.selectedUnit && jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units[this.state.selectedUnit] && !!Object.keys(jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units[this.state.selectedUnit].teams).length &&
             <Select
               options={jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units[this.state.selectedUnit].teams}
-              label={translations.selectTeam}
+              label={this.state.selectedTeam ? translations.done : translations.selectTeam}
               default={translations.defaultSelectOption}
               type="selectedTeam"
               onChange={this.handleChange}
