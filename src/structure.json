@@ -1,0 +1,250 @@
+{
+    "regions": {
+        "region A": {
+            "name": "Region A",
+            "name_url": "region-a",
+            "areas": {
+                "area A": {
+                    "name": "Area A",
+                    "name_url": "area-a",
+                    "units": {
+                        "Unit A": {
+                            "name": "Unit A",
+                            "name_url": "unit-a",
+                            "teams": {
+                                "team A": {
+                                    "name": "Team A",
+                                    "name_url": "team-a"
+                                },
+                                "team B": {
+                                    "name": "Team B",
+                                    "name_url": "team-b"
+                                }
+                            }
+                        },
+                        "Unit B": {
+                            "name": "Unit B",
+                            "name_url": "unit-b",
+                            "teams": {
+                                "team A": {
+                                    "name": "Team A",
+                                    "name_url": "team-a"
+                                },
+                                "team B": {
+                                    "name": "Team B",
+                                    "name_url": "team-b"
+                                },
+                                "team C": {
+                                    "name": "Team C",
+                                    "name_url": "team-c"
+                                },
+                                "team D": {
+                                    "name": "Team D",
+                                    "name_url": "team-d"
+                                },
+                                "team E": {
+                                    "name": "Team E",
+                                    "name_url": "team-e"
+                                },
+                                "team F": {
+                                    "name": "Team F",
+                                    "name_url": "team-f"
+                                },
+                                "team G": {
+                                    "name": "Team G",
+                                    "name_url": "team-g"
+                                },
+                                "team H": {
+                                    "name": "Team B",
+                                    "name_url": "team-b"
+                                },
+                                "team I": {
+                                    "name": "Team I",
+                                    "name_url": "team-i"
+                                },
+                                "team J": {
+                                    "name": "Team J",
+                                    "name_url": "team-j"
+                                }
+                            }
+                        }
+                    }
+                },
+                "area B": {
+                    "name": "Area B",
+                    "name_url": "area-b",
+                    "units": {
+                        "unit C": {
+                            "name": "Unit C",
+                            "name_url": "unit-c",
+                            "teams": {
+                                "teams": {
+                                    "team A": {
+                                        "name": "Team A",
+                                        "name_url": "team-a"
+                                    },
+                                    "team B": {
+                                        "name": "Team B",
+                                        "name_url": "team-b"
+                                    },
+                                    "team C": {
+                                        "name": "Team C",
+                                        "name_url": "team-c"
+                                    },
+                                    "team D": {
+                                        "name": "Team D",
+                                        "name_url": "team-d"
+                                    },
+                                    "team E": {
+                                        "name": "Team E",
+                                        "name_url": "team-e"
+                                    },
+                                    "team F": {
+                                        "name": "Team F",
+                                        "name_url": "team-f"
+                                    },
+                                    "team G": {
+                                        "name": "Team G",
+                                        "name_url": "team-g"
+                                    },
+                                    "team H": {
+                                        "name": "Team B",
+                                        "name_url": "team-b"
+                                    },
+                                    "team I": {
+                                        "name": "Team I",
+                                        "name_url": "team-i"
+                                    },
+                                    "team J": {
+                                        "name": "Team J",
+                                        "name_url": "team-j"
+                                    }
+                                }
+                            }
+                        },
+                        "unit D": {
+                            "name": "Unit D",
+                            "name_url": "unit-d",
+                            "teams": {
+                                "team H": {
+                                    "name": "Team B",
+                                    "name_url": "team-b"
+                                },
+                                "team K": {
+                                    "name": "Team K",
+                                    "name_url": "team-k"
+                                },
+                                "team J": {
+                                    "name": "Team J",
+                                    "name_url": "team-j"
+                                }
+                            }
+                        },
+                        "unit E": {
+                            "name": "Unit E",
+                            "name_url": "unit-e",
+                            "teams": {
+                                "team H": {
+                                    "name": "Team C",
+                                    "name_url": "team-c"
+                                },
+                                "team K": {
+                                    "name": "Team K",
+                                    "name_url": "team-k"
+                                },
+                                "team S": {
+                                    "name": "Team S",
+                                    "name_url": "team-s"
+                                }
+                            }
+                        },
+                        "unit F": {
+                            "name": "Unit F",
+                            "name_url": "unit-f",
+                            "teams": {
+                                "team H": {
+                                    "name": "Team C",
+                                    "name_url": "team-c"
+                                },
+                                "team K": {
+                                    "name": "Team K",
+                                    "name_url": "team-k"
+                                },
+                                "team S": {
+                                    "name": "Team S",
+                                    "name_url": "team-s"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "region B": {
+            "name": "Region B",
+            "name_url": "region-b",
+            "areas": {
+                "area C": {
+                    "name": "Area C",
+                    "name_url": "area-c",
+                    "units": {
+                        "unit G": {
+                            "name": "Unit G",
+                            "name_url": "unit-g",
+                            "teams":{
+                                "team K": {
+                                    "name": "Team K",
+                                    "name_url": "team-k"
+                                },
+                                "team S": {
+                                    "name": "Team S",
+                                    "name_url": "team-s"
+                                }
+                            }
+                        },
+                        "unit J": {
+                            "name": "Unit J",
+                            "name_url": "unit-j",
+                            "teams":{
+                                "team K": {
+                                    "name": "Team K",
+                                    "name_url": "team-k"
+                                },
+                                "team S": {
+                                    "name": "Team S",
+                                    "name_url": "team-s"
+                                }
+                            }
+                        },
+                        "unit S": {
+                            "name": "Unit S",
+                            "name_url": "unit-s",
+                            "teams":{
+                                "team K": {
+                                    "name": "Team K",
+                                    "name_url": "team-k"
+                                },
+                                "team S": {
+                                    "name": "Team S",
+                                    "name_url": "team-s"
+                                },
+                                "team D": {
+                                    "name": "Team D",
+                                    "name_url": "team-d"
+                                },
+                                "team E": {
+                                    "name": "Team E",
+                                    "name_url": "team-e"
+                                },
+                                "team F": {
+                                    "name": "Team F",
+                                    "name_url": "team-f"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
