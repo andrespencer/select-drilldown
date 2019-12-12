@@ -9,6 +9,7 @@ class App extends PureComponent {
     super(props)
 
     this.handleChange = this.handleChange.bind(this)
+    this.setNewState = this.setNewState.bind(this)
 
     this.state = {
       selectedRegion: "",
@@ -19,10 +20,51 @@ class App extends PureComponent {
   }
 
   handleChange (value, type) {
+    switch (type) {
+      case "selectedRegion":
+        this.setState({
+          selectedRegion: "",
+          selectedArea: "",
+          selectedUnit: "",
+          selectedTeam: ""
+        }, () => {
+          this.setNewState(value, type)
+        })
+        break;
+      case "selectedArea":
+        this.setState({
+          selectedArea: "",
+          selectedUnit: "",
+          selectedTeam: ""
+        }, () => {
+          this.setNewState(value, type)
+        })
+        break;
+      case "selectedUnit":
+        this.setState({
+          selectedUnit: "",
+          selectedTeam: ""
+        }, () => {
+          this.setNewState(value, type)
+        })
+        break;
+      case "selectedTeam":
+        this.setState({
+          selectedTeam: ""
+        }, () => {
+          this.setNewState(value, type)
+        }) 
+        break;
+      default:
+    }
+  }
+
+  setNewState (value, type) {
     this.setState({
       [type]: value
     })
   }
+
 
   render () {
     return (
@@ -49,6 +91,24 @@ class App extends PureComponent {
               label={translations.selectArea}
               default={translations.defaultSelectOption}
               type="selectedArea"
+              onChange={this.handleChange}
+            />
+          }
+          {!!this.state.selectedRegion && !!this.state.selectedArea && jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea] && !!Object.keys(jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units).length &&
+            <Select
+              options={jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units}
+              label={translations.selectUnit}
+              default={translations.defaultSelectOption}
+              type="selectedUnit"
+              onChange={this.handleChange}
+            />
+          }
+          {!!this.state.selectedRegion && !!this.state.selectedArea && !!this.state.selectedUnit && jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units[this.state.selectedUnit] && !!Object.keys(jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units[this.state.selectedUnit].teams).length &&
+            <Select
+              options={jsonResponse.regions[this.state.selectedRegion].areas[this.state.selectedArea].units[this.state.selectedUnit].teams}
+              label={translations.selectTeam}
+              default={translations.defaultSelectOption}
+              type="selectedTeam"
               onChange={this.handleChange}
             />
           }
