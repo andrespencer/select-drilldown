@@ -1,8 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## General approach
+
+1. Make it work
+2. Make it usable
+3. Structure the code properly
+
 ## Improvements suggestions
 
-- Error handling (what if no regions are found)?
+1. Link to the `team_url` in the end
+2. Error handling (what if no regions/areas/etc. are found)?
+
 
 ## Available Scripts
 
