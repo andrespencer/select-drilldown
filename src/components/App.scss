@@ -1,9 +1,11 @@
-$color-main: #181f27;
-$color-whitish: #bfbfbf;
-$color-black: #000;
+@import "../ui-vars";
 
 body {
   margin: 0;
+}
+
+main {
+  margin: 10vh 10vw;
 }
 
 .App {

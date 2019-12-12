@@ -2,7 +2,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Improvements suggestions
 
-1. Move SASS variables to a `vars` file
 
 ## Available Scripts
 
