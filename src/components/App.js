@@ -8,12 +8,20 @@ class App extends PureComponent {
   constructor (props) {
     super(props)
 
+    this.handleChange = this.handleChange.bind(this)
+
     this.state = {
-      selectedRegion: null,
-      selectedArea: null,
-      selectedUnit: null,
-      selectedTeam: null
+      selectedRegion: "",
+      selectedArea: "",
+      selectedUnit: "",
+      selectedTeam: ""
     }
+  }
+
+  handleChange (value, type) {
+    this.setState({
+      [type]: value
+    })
   }
 
   render () {
@@ -26,11 +34,22 @@ class App extends PureComponent {
             alt={translations.logoAlt} />
         </header>
         <main>
-          {!!Object.keys(jsonResponse.regions).length &&
+          {jsonResponse.regions && !!Object.keys(jsonResponse.regions).length &&
             <Select
               options={jsonResponse.regions}
               label={translations.selectRegion}
               default={translations.defaultSelectOption}
+              type="selectedRegion"
+              onChange={this.handleChange}
+            />
+          }
+          {!!this.state.selectedRegion && jsonResponse.regions[this.state.selectedRegion] && !!Object.keys(jsonResponse.regions[this.state.selectedRegion].areas).length &&
+            <Select
+              options={jsonResponse.regions[this.state.selectedRegion].areas}
+              label={translations.selectArea}
+              default={translations.defaultSelectOption}
+              type="selectedArea"
+              onChange={this.handleChange}
             />
           }
         </main>
