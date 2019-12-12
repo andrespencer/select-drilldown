@@ -1,3 +1,27 @@
+$color-main: #181f27;
+$color-whitish: #bfbfbf;
+$color-black: #000;
+
+body {
+  margin: 0;
+}
+
 .App {
   text-align: center;
+  background-color: $color-black;
+  color: $color-whitish;
+  width: 100vw;
+  height: 100vh;
+  font-family: Stag Sans, sans-serif;
+}
+
+.Header {
+  background-color: $color-main;
+
+  &__Logo {
+    max-width: 30vw;
+    max-height: 10vh;
+    padding: 3vh;
+    opacity: .5;
+  }
 }
